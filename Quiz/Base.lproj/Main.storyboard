@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOM-gV-osI">
+                                <rect key="frame" x="239" y="273" width="123" height="30"/>
+                                <state key="normal" title="Mostrar Resposta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mostrarResposta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KYF-UJ-XTd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sT3-3q-SLU">
+                                <rect key="frame" x="241" y="147" width="119" height="30"/>
+                                <state key="normal" title="Mostrar Pergunta">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mostrarPergunta:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jIs-53-kM6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pergunta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAI-Pz-ilk">
+                                <rect key="frame" x="265" y="118" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-- Resposta--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UNs-GM-8ZW">
+                                <rect key="frame" x="248" y="239" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="sT3-3q-SLU" secondAttribute="centerX" constant="-0.5" id="4W1-6k-diY"/>
+                            <constraint firstAttribute="centerY" secondItem="XOM-gV-osI" secondAttribute="centerY" constant="12" id="CRh-tV-JAA"/>
+                            <constraint firstItem="IAI-Pz-ilk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="KHZ-qZ-YzA"/>
+                            <constraint firstAttribute="centerX" secondItem="IAI-Pz-ilk" secondAttribute="centerX" id="MEp-Av-7zF"/>
+                            <constraint firstItem="sT3-3q-SLU" firstAttribute="top" secondItem="IAI-Pz-ilk" secondAttribute="bottom" constant="8" id="OEc-Jh-NNV"/>
+                            <constraint firstAttribute="centerY" secondItem="UNs-GM-8ZW" secondAttribute="centerY" constant="50.5" id="QmM-Yp-zb3"/>
+                            <constraint firstAttribute="centerX" secondItem="UNs-GM-8ZW" secondAttribute="centerX" constant="-0.5" id="azZ-FY-Fkn"/>
+                            <constraint firstAttribute="centerX" secondItem="XOM-gV-osI" secondAttribute="centerX" constant="-0.5" id="u9H-eL-cgB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mostrarPergunta" destination="sT3-3q-SLU" id="6hK-tH-gC8"/>
+                        <outlet property="mostrarResposta" destination="XOM-gV-osI" id="2Pk-EQ-yd6"/>
+                        <outlet property="q1" destination="IAI-Pz-ilk" id="oDr-CL-JeF"/>
+                        <outlet property="r1" destination="UNs-GM-8ZW" id="WHr-Xt-LZb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="356" y="92"/>
+        </scene>
+    </scenes>
+</document>
